@@ -1,3 +1,0 @@
-[submodule ".gradient"]
-	path = .gradient
-	url = git@github.com:marcins-gc/test_subtree.git
