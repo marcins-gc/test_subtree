@@ -47,6 +47,7 @@ export POPTORCH_LOG_LEVEL=ERR
 export RDMAV_FORK_SAFE=1
 
 echo "Graphcore setup - Spawning dataset preparation process"
+echo "${@}"
 nohup /notebooks/.gradient/prepare-datasets.sh ${@} & tail -f nohup.out &
 
 export PIP_DISABLE_PIP_VERSION_CHECK=1 CACHE_DIR=/tmp

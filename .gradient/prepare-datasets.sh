@@ -13,20 +13,17 @@ run-tests() {
         --upload_report ${4} \
         --reports_folder ${5} \
         --spec ${6} "${@:9}" \
-        --token ${7} \
+        --token ${7}
 }
 
-if [ ! "$(command -v fuse-overlayfs)" ]
-then
+if [ ! "$(command -v fuse-overlayfs)" ]; then
     echo "fuse-overlayfs not found installing - please update to our latest image"
     apt update -y
     apt install -o DPkg::Lock::Timeout=120 -y psmisc libfuse3-dev fuse-overlayfs
 fi
 
-
 echo "Starting preparation of datasets"
 /notebooks/.gradient/symlink_datasets_and_caches.py
-
 
 # pre-install the correct version of optimum for this release
 python3 -m pip install "optimum-graphcore>=0.5, <0.6"
