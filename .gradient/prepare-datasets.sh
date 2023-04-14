@@ -12,8 +12,9 @@ run-tests() {
         --version ${3} \
         --upload_report ${4} \
         --reports_folder ${5} \
-        --spec ${6} "${@:9}" \
-        --token ${7}
+        --spec ${6} \
+        --token ${7} \
+        ${@:9}
 }
 
 if [ ! "$(command -v fuse-overlayfs)" ]; then
