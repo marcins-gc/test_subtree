@@ -56,3 +56,7 @@ export PIP_DISABLE_PIP_VERSION_CHECK=1 CACHE_DIR=/tmp
 # jupyter lab --allow-root --ip=0.0.0.0 --no-browser --ServerApp.trust_xheaders=True \
 #             --ServerApp.disable_check_xsrf=False --ServerApp.allow_remote_access=True \
 #             --ServerApp.allow_origin='*' --ServerApp.allow_credentials=True
+
+
+# /notebooks/setup.sh 4 test unset unset unset huggingface-IPU-POD4  /storage/ paperspace-huggingface-notebooks.yaml unset port_paperspace_scripts --progress-trace-period 60
+#  python -m examples_utils run_paperspace_tests --api_key unset --dataset unset --version unset --upload_report huggingface-IPU-POD4 --reports_folder /storage/ --spec paperspace-huggingface-notebooks.yaml --progress-trace-period 60 --token unset
